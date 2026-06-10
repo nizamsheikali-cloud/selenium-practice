@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 5 - XPath Locators</title>
+  <style>
+    body { font-family: Arial; padding: 30px; }
+    .section { margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-radius: 6px; border-left: 4px solid #007BFF; }
+    button { padding: 8px 16px; margin: 4px; border: none; border-radius: 4px; cursor: pointer; }
+    .btn-primary { background: #007BFF; color: white; }
+    .btn-danger { background: #dc3545; color: white; }
+    .btn-success { background: #28a745; color: white; }
+    #status { margin-top: 10px; font-weight: bold; color: purple; }
+  </style>
+</head>
+<body>
+  <h2>XPath Practice Page</h2>
+
+  <!-- Section 1: Buttons with different attributes -->
+  <div class="section" id="section-buttons">
+    <h3>Buttons</h3>
+    <button class="btn-primary" id="btn1" data-action="save">Save</button>
+    <button class="btn-danger" id="btn2" data-action="delete">Delete</button>
+    <button class="btn-success" id="btn3" data-action="submit">Submit</button>
+    <p id="status">No button clicked</p>
+  </div>
+
+  <!-- Section 2: Links -->
+  <div class="section" id="section-links">
+    <h3>Links</h3>
+    <a href="#" id="link-home" class="nav-link">Home</a> |
+    <a href="#" id="link-about" class="nav-link">About</a> |
+    <a href="#" id="link-contact" class="nav-link">Contact</a>
+  </div>
+
+  <!-- Section 3: Nested elements -->
+  <div class="section" id="section-nested">
+    <h3>User Info</h3>
+    <div class="user-card">
+      <span class="user-name">Alice Johnson</span>
+      <span class="user-role">Admin</span>
+    </div>
+    <div class="user-card">
+      <span class="user-name">Bob Smith</span>
+      <span class="user-role">Editor</span>
+    </div>
+  </div>
+
+  <!-- Section 4: Dynamic content -->
+  <div class="section" id="section-dynamic">
+    <h3>Dynamic List</h3>
+    <ul id="item-list">
+      <li class="item" data-id="101">Apple</li>
+      <li class="item" data-id="102">Banana</li>
+      <li class="item" data-id="103">Cherry</li>
+      <li class="item" data-id="104">Date</li>
+    </ul>
+  </div>
+
+  <script>
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('status').textContent = 'Clicked: ' + btn.textContent;
+      });
+    });
+  </script>
+</body>
+</html>

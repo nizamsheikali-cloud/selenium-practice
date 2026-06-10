@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 3 - Web Scraping</title>
+  <style>
+    body { font-family: Arial; padding: 30px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background-color: #4CAF50; color: white; }
+    tr:nth-child(even) { background-color: #f2f2f2; }
+    .price { color: #e44d26; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Product Catalog</h2>
+  <p id="intro">Below is a list of available products.</p>
+
+  <table id="product-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Product Name</th>
+        <th>Category</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td class="product-name">Laptop</td>
+        <td>Electronics</td>
+        <td class="price">$999</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td class="product-name">Chair</td>
+        <td>Furniture</td>
+        <td class="price">$150</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td class="product-name">Headphones</td>
+        <td>Electronics</td>
+        <td class="price">$79</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td class="product-name">Desk</td>
+        <td>Furniture</td>
+        <td class="price">$320</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td class="product-name">Mouse</td>
+        <td>Electronics</td>
+        <td class="price">$35</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
